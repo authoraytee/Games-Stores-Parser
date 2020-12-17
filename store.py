@@ -1,7 +1,3 @@
-
-
-
-
 class Store:
 
     def __init__(self, StoreName, PreLink, RemoveSymbol):
@@ -9,8 +5,7 @@ class Store:
         self.preliminaryLink = PreLink #Ссылка до обработки
         self.removeSymbolForLink = RemoveSymbol
 
-    @staticmethod
-    def GetGameName():
+    def getGameName(self):
         print("Введите название игры: ")
         gameNameBeforeEditing = str(input())
 
@@ -18,3 +13,8 @@ class Store:
         gameName = gameName.strip()
 
         return gameName
+
+
+
+store = Store('Steam', 'ddddd', '+')
+print(store.storeName)
