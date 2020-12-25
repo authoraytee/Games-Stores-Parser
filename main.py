@@ -1,5 +1,5 @@
 from game import Game
-from store import Store
+from service import Service
 
 
 
@@ -16,5 +16,5 @@ if __name__ == "__main__":
             break
 
         game = Game(gama).output()
-        steampay = Store('https://steampay.com/game/', game, '-', 'div', 'product__current-price')
+        steampay = Service('https://steampay.com/game/', game, '-', 'div', 'product__current-price')
         print(steampay.output())

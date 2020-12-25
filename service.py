@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-class Store():
+class Service():
 
     def __init__(self, basicLink, game, convertNameSign, tag, htmlclass):
         self.basicLink = basicLink
