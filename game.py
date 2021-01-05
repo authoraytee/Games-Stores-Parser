@@ -3,11 +3,10 @@ class Game():
         self.gameName = game
 
     def __getGameName(self, game):
-        game = game.lower()
-        game = game.split()
+        print(type(game))
+        self.gameName = self.gameName.lower()
+        self.gameName = self.gameName.split()
         
-        self.gameName = game
-
     def output(self):
         self.__getGameName(self.gameName)
 

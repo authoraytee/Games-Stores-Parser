@@ -12,7 +12,7 @@ class Service():
 
     def __convertGameNameAndJoinToLink(self, link, game, sign):
         game = sign.join(game)
-        link = link + game
+        link = link.format(game)
         return link
 
     def __getRequest(self, url):
@@ -31,7 +31,7 @@ class Service():
             price = quotes[0]
             return price
         except:
-            return 'Oh no!\nScript went crashed!\nCant get your game on the store, try again!'
+            return 'Game is out of stock or entered incorrectly!'
 
     def output(self):
         link = self.__convertGameNameAndJoinToLink(self.basicLink, self.game, self.convertNameSign)
@@ -43,4 +43,4 @@ class Service():
 
         price = self.__parse(link, soup, self.tag, self.htmlclass)
 
-        return price
+        return {'price': price, 'link':link}
